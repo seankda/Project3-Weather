@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Scatter Line</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!--Navigation bar-->
+  <script src="../../static/js/navbar.js"></script>
+  <!--end of Navigation bar-->
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <!-- End of Stylesheet -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <h5>Select a city:
+    <select>
+      <option>City</option>
+      <option value="amsterdam" onclick="updateDiv()">Amsterdam</option>
+      <option value="bangkok">Bangkok</option>
+      <option value="beijing">Beijing</option>
+      <option value="belgrade">Belgrade</option>
+      <option value="budapest">Budapest</option>
+      <option value="busan">Busan</option>
+      <option value="delhi">Delhi</option>
+      <option value="haarlem">Haarlem</option>
+      <option value="hongkong">Hong Kong</option>
+      <option value="kyoto">Kyoto</option>
+      <option value="london">London</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="osaka">Osaka</option>
+      <option value="santiago">Santiago</option>
+      <option value="seoul">Seoul</option>
+      <option value="shanghai">Shanghai</option>
+      <option value="taipei">Taipei</option>
+      <option value="tokyo">Tokyo</option>
+    </select></h5>
+
+
+  <div class="scatterPadding">
+    <!-- Plot 1 -->
+    <div class="amsterdam box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot02019"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot02020"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Plot 2 -->
+    <div class="bangkok box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot12019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot12020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 3 -->
+    <div class="beijing box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot22019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot22020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 4 -->
+    <div class="belgrade box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot32019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot32020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 5 -->
+    <div class="budapest box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot42019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot42020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 6 -->
+    <div class="busan box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot52019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot52020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 7 -->
+    <div class="delhi box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot62019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot62020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 8 -->
+    <div class="haarlem box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot72019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot72020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 9 -->
+    <div class="hongkong box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot82019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot82020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 9 -->
+    <div class="kyoto box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot92019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot92020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 10 -->
+    <div class="london box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot102019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot102020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 11 -->
+    <div class="mumbai box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot112019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot112020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 12 -->
+    <div class="osaka box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot122019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot122020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 13 -->
+    <div class="santiago box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot132019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot132020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 14 -->
+    <div class="seoul box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot142019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot142020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 15 -->
+    <div class="shanghai box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot152019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot152020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 16 -->
+    <div class="taipei box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot162019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot162020"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plot 17 -->
+    <div class="tokyo box">
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2019</h3>
+          </center>
+          <div id="plot172019"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl">
+          <center>
+            <h3>2020</h3>
+          </center>
+          <div id="plot172020"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="/static/js/scatter.js"></script>
+
+  <!-- Bootstrap core JavaScript -->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+  <!-- Menu Toggle Script -->
+  <script src="/static/js/showHide.js"></script>
+</body>
+
+</html>

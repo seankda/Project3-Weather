@@ -1,0 +1,50 @@
+/* .item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 200px;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+} */
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 38px;
+  letter-spacing: 10px;
+}
+
+.caption span.credits {
+  color: #fff;
+  font-size: 26px;
+  letter-spacing: 10px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.bubbles {
+  padding-left: 3%;
+}
+
+.bubbleChart0{
+  width: 800px;
+  height: 700px;
+}
+
+.bubbleChart1{
+  width: 800px;
+  height: 700px;
+}
+
+.scatterPadding{
+  padding-top: 1%;
+}
